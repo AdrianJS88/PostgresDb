@@ -63,7 +63,7 @@ public class Main {
         pSt.setString(1, user.next());
         System.out.println("insert password:");
         pSt.setString(2, user.next());
-        int val = pSt.executeUpdate(); // 1
+      //  int val = pSt.executeUpdate(); // 1
 
 
     }
