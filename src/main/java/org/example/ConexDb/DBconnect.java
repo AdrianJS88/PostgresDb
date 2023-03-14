@@ -13,13 +13,8 @@ public class DBconnect {
         parameters.put("user", "postgres");
         parameters.put("password", "postgres");
         Connection conn = DriverManager.getConnection(dbURL, parameters);
-        // create three connections to three different databases on localhost
-
-
+     
         try {
-
-            // Connect method #3
-
             parameters.put("user", "postgres");
             parameters.put("password", "postgres");
 
