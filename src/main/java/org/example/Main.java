@@ -14,6 +14,9 @@ import static org.example.ConexDb.DBconnect.ConexiuneDB;
 public class Main {
 
     public static void main(String[] args) throws SQLException, IOException {
+
+
+
         Scanner sc = new Scanner(System.in);
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
         int ch;
@@ -21,22 +24,22 @@ public class Main {
         {
             System.out.println("*****************************************************\n");
             System.out.println("APP MENU :");
-            System.out.println("1 - Print database");
-            System.out.println("2 - insert db");
-            System.out.println("3 - delete from db");
-            System.out.println("4 - update db");
-            System.out.println("5 - exit app db");
+            System.out.println("1 - Print db");
+            System.out.println("2 - Insert db");
+            System.out.println("3 - Delete from db");
+            System.out.println("4 - Update db");
+            System.out.println("5 - Exit app db");
             System.out.println("*****************************************************\n");
             System.out.print("Enter choice : ");
             ch=Integer.parseInt(br.readLine());
             if(ch==1)
-                readDb();
+                 readDb();
             else if(ch==2)
                  insertDb(sc);
             else if(ch==3)
-                deleteDb(sc);
+                  deleteDb(sc);
             else if(ch==4)
-            updateDb(sc);
+                  updateDb(sc);
             else
                 System.out.println("Exit app");
         }while(ch!=5);
@@ -49,7 +52,8 @@ public class Main {
         PreparedStatement stmt = conn.prepareStatement("SELECT * FROM users order BY id");
         ResultSet rs = stmt.executeQuery();
         while (rs.next()) {
-            System.out.printf("id:%d username:%s password:%s%n", rs.getInt("id"), rs.getString("username"), rs.getString("password"));
+            System.out.printf("id:%d%n username:%s%n password:%s%n",rs.getInt("id"),rs.getString("username"),rs.getString("password"));
+            System.out.println("*****************************************************************************************************************");
         }
 
 
